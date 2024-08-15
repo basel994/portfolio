@@ -1,6 +1,17 @@
-.App {
-  text-align: center;
+.dark-container {
+ background-color: rgb(63, 62, 62);
+ min-height: 100vh;
 }
+.dark-container * {
+  color: #ffff;
+}
+.white-container {
+  background-color: rgb(255, 255, 255);
+  min-height: 100vh;
+ }
+ .white-container * {
+   color: #000000;
+ }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.5rem;
+}
+.logo {
+    font-size: 20px;
+    cursor: pointer;
+}
+.logo:hover {
+    animation: fade 2s ease-in-out infinite alternate-reverse;
+}
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.mode {
+    cursor: pointer;
+    margin-left: auto;
+}
+.mode img {
+    width: 2rem;
+    height: 2rem;
+}
+@keyframes fade {
+    from {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+}
