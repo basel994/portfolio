@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(90, 87, 87);
+}
+.logo {
+    color: #ffff;
+    font-size: 20px;
+}
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
