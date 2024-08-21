@@ -1,0 +1,14 @@
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem;
+}
+.error-page img {
+    width: 5rem;
+    height: 5rem;
+}
+.error-page h2 {
+    color: rgb(245, 100, 100);
+}

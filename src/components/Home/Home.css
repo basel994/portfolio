@@ -1,0 +1,129 @@
+.home {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 6rem 0;
+}
+.left-side {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+gap: 1rem;
+}
+.hello {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.hello img {
+    width: 2rem;
+    height: 2rem;
+    animation: hello 1s ease-in-out infinite alternate-reverse;
+}
+.graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+.graph .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+.graph .info p {
+    font-size: 1.5rem;
+    position: relative;
+}
+.graph .info p::before {
+    position: absolute;
+    left: -1.5rem;
+    top: 0.7rem;
+    content: "";
+    width:10px;
+    height: 10px;
+    background-color: #7e7c7a;
+}
+.right-side img {
+    width: 300px;
+    height: auto;
+}
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact .btn {
+    border: 0.1rem solid #61a720;
+    background-color: transparent;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
+}
+.contact .btn:hover{
+    opacity: 1;
+}
+@keyframes hello {
+    10% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+    
+}
+@media screen and ( max-width:992px) {
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .hello h1 {
+        font-size: 1.5rem;
+    }
+    .graph .info p {
+        font-size: 1.3rem;
+    }
+    .right-side {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .right-side img {
+        animation: position 1s ease-in-out forwards;
+    }
+
+    @keyframes position {
+        from {
+            transform: translate(100px,-100px);
+        }
+        to {
+            transform: translate(0px);
+        }
+        
+    }
+}
+@media screen and (max-width:400px) {
+    .right-side img {
+        width: 300px;
+    }
+}

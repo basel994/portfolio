@@ -1,40 +1,213 @@
-.header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 2rem;
-    padding: 0.5rem;
+header {
+    position: relative;
 }
-.logo {
-    font-size: 20px;
+.navbar {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: top 1s ease-in-out;
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+}
+.navbar-outView {
+    animation: slide 1s ease-in-out forwards;
+    z-index: 2000;
+    background-color:transparent;
+    top: -5rem;
+}
+.navbar-slideUp {
+    animation: slideUp 1s ease-in-out forwards;
+    z-index: 2000;
+    background-color:transparent;
+    top: 0;
+}
+.navbar-dark {
+    background-color: rgba(18,37,53,1);
+}
+.navbar-light {
+    background-color: rgba(255,255,255,1);
+}
+.navbar .logo {
+    display: flex;
+    align-items: center;
     cursor: pointer;
 }
-.logo:hover {
-    animation: fade 2s ease-in-out infinite alternate-reverse;
+.navbar .logo div {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: type 3s ease-in-out infinite alternate-reverse;
 }
-.menu {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-}
-.mode {
-    cursor: pointer;
-    margin-left: auto;
-}
-.mode img {
+.navbar .logo img {
     width: 2rem;
     height: 2rem;
 }
-@keyframes fade {
+.navbar .logo:hover {
+    animation: none;
+}
+.navbar .links {
+    margin-left: auto;
+    display: flex;
+    gap: 2rem;
+}
+.navbar .links li a {
+    font-size: 1.2rem;
+    background-image: linear-gradient(#b6bbe7, #7982d1);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    position: relative;
+    /* Change background position to bottom */
+    background-position: bottom;
+    transition: .5s;
+    padding: 0.5rem;
+    transition: all 0.5s ease-in-out;
+}
+.navbar .links li a:hover {
+    background-size: 100% 100%;
+}
+.navbar .links li a.active::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    z-index: 1;
+    border-bottom: 0.1rem solid rgb(226, 155, 48);
+    animation: border 1s ease-in-out forwards;
+}
+.navbar .light-mode {
+    cursor: pointer;
+    margin-left: auto;
+}
+.navbar .light-mode img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.navbar .toggle-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    height: 1.3rem;
+    margin-left: auto;
+}
+.navbar .toggle-btn .bar {
+    position: relative;
+    width: 1.5rem;
+    height: 0.1rem;
+    background-color: #11b88e;
+    transition: all 0.5s ease-in-out;
+}
+.navbar .toggle-btn .bar::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #11b88e;
+    top: 0.5rem;
+    right: 0;
+    transition: all 0.5s ease-in-out;
+}
+.navbar .toggle-btn .bar::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #11b88e;
+    top: -0.5rem;
+    right: 0;
+    transition: all 0.5s ease-in-out;
+}
+.navbar .toggle-btn .xBar {
+    width: 0;
+}
+.navbar .toggle-btn .xBar::after {
+    top: 0;
+    right: 0;
+    width: 1.5rem;
+    transform: rotate(-45deg);
+    background-color: #e79676;
+}
+.navbar .toggle-btn .xBar::before {
+    top: 0;
+    right: 0;
+    width: 1.5rem;
+    transform: rotate(45deg);
+    background-color: #e79676;
+}
+
+@keyframes type {
     from {
-        opacity: 0.5;
-        transform: scale(1);
+        width: 0;
     }
     to {
-        opacity: 1;
-        transform: scale(1.1);
+        width: 100%;
+    }
+}
+@keyframes border {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+    
+}
+@keyframes slide {
+    from {
+        top: -5rem;
+    }
+    to {
+        top: 0;
+    }
+    
+}
+@keyframes slideUp {
+    from {
+        top: 0;
+    }
+    to {
+        top:-5rem;
+    }
+    
+}
+@media screen and ( max-width: 992px) {
+    .navbar .links {
+        display: none;
+    }
+    .navbar .toggle-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        overflow: hidden;
+        height: 0;
+        z-index: 2000;
+        transition: height 0.5s ease-in-out;
+    }
+    .navbar .dropdown-menu-dark {
+        background-color: rgba(18,37,53,0.9);
+    }
+    .navbar .dropdown-menu-light {
+        background-color: rgba(255,255,255,0.9);
+    }
+    .navbar .open {
+        height: 240px;
     }
     
 }

@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import "./Header.css";
 import { ModeContext } from "../../context/modeProvider/ModeProvider";
 import dark from "./../../assest/dark.png";
 import sun from "./../../assest/sun.png";
+import B from "./../../assest/images/logo.png";
 
 const Header = () => {
     const {mode,changeMode} = useContext(ModeContext);
@@ -12,19 +13,64 @@ const Header = () => {
         }
         else changeMode("dark");
     }
+    useEffect(()=>{
+        if(mode==="dark"){
+            linksRef.current?.classList.remove("dropdown-menu-light");
+            linksRef.current?.classList.add("dropdown-menu-dark");
+        }
+        else{
+            linksRef.current?.classList.remove("dropdown-menu-dark");
+            linksRef.current?.classList.toggle("dropdown-menu-light");
+        }
+    },[mode])
+    const linksRef = useRef<HTMLUListElement>(null);
+    const toggleRef = useRef<HTMLSpanElement>(null);
+    const [isClicked,setIsClicked] = useState(false);
+    const collapseClicked = () => {
+        setIsClicked(!isClicked);
+        if (isClicked) {
+            linksRef.current?.classList.add("open");
+            toggleRef.current?.classList.add("xBar");
+        }
+        else {
+            linksRef.current?.classList.remove("open");
+            toggleRef.current?.classList.remove("xBar");
+        }
+        
+    }
+    const [scroll, setScroll] = useState("");
+    const [y, setY] = useState(window.scrollY);
+    const controlNavbar = () => {
+        window.scrollY > y?setScroll("down"):setScroll("up");
+        setY(window.scrollY);
+    };  
+  
+    useEffect(() => {
+      window.addEventListener('scroll', controlNavbar);
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }, [y]);
     return (
-        <div className="header">
-            <p className="logo">Basel Balkees</p>
-            <ul className="menu">
-                <li>الرئيسية</li>
-                <li>تسجيل الدخول</li>
-                <li>التسجيل</li>
-                <li>حول</li>
-            </ul>
-            <div className="mode" onClick={updateMode}>
-                <img src={mode==="dark"?sun:dark} alt="mode" />
+        <header>
+            <div className={` ${scroll==="up"?"navbar navbar-outView":(scroll==="down"?"navbar navbar-slideUp":"navbar")} ${mode==="dark"?"navbar-dark":"navbar-light"}`}>
+                <div className="logo">
+                    <img src={B} alt="B" />
+                    <div>asel Balkees</div>
+                </div>
+                <ul className="links dropdown-menu" ref={linksRef}>
+                    <li><a href="#main">About</a></li>
+                    <li><a href="#mySkills">Skills</a></li>
+                    <li><a href="#myEducation">Education</a></li>
+                </ul>
+                <div className="light-mode">
+                    <img src={mode==="dark"?sun:dark} alt="light" onClick={updateMode} />
+                </div>
+                <div className="toggle-btn" onClick={collapseClicked}>
+                    <span className="bar" ref={toggleRef}></span>
+                </div>
             </div>
-        </div>
+        </header>
     )
 }
 export default Header;

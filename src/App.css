@@ -1,20 +1,65 @@
 .dark-container {
- background-color: rgb(63, 62, 62);
+ background-color: rgb(18, 37, 53);
  min-height: 100vh;
 }
 .dark-container * {
-  color: #ffff;
+  color: #e0dbdb;
 }
 .white-container {
   background-color: rgb(255, 255, 255);
   min-height: 100vh;
  }
  .white-container * {
-   color: #000000;
+   color: #313030;
  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.content {
+  min-height: 70vh;
+  margin-top: 0;
+  padding: 5rem 5rem;
+}
+.scroll-top {
+  position: fixed;
+  bottom: -5rem;
+  right: 1rem;
+  z-index: 2000;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  transition: bottom ease-in-out 2s;
+  animation: arrow 3s ease-in-out infinite alternate-reverse;
+}
+.scroll-top-show {
+  bottom: 3rem;
+}
+
+.show {
+  animation: show 1s ease-in-out forwards;
+}
+@keyframes show {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes arrow {
+  10% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
