@@ -36,7 +36,13 @@
 }
 
 .show {
-  animation: show 1s ease-in-out forwards;
+  animation: show 2s ease-in-out forwards;
+}
+.from-left {
+  animation: from-left 2s ease-out forwards;
+}
+.from-right {
+  animation: from-right 2s ease-out forwards;
 }
 @keyframes show {
   from {
@@ -46,6 +52,24 @@
     transform: scale(1);
   }
 }
+@keyframes from-left {
+from {
+  transform: translateX(-100%);
+  overflow: hidden;
+}
+to {
+  transform: translateX(0);
+}
+}
+@keyframes from-right {
+  from {
+    transform: translateX(100%);
+    overflow: hidden;
+  }
+  to {
+    transform: translateX(0);
+  }
+  }
 @keyframes arrow {
   10% {
     transform: translateY(0px);

@@ -5,14 +5,14 @@ import developer from "./../../assest/images/welcome.webp";
 import useInViewPort from "../../useInViewPort/useInViewPort";
 
 const Home = () => {
-    useEffect(()=>{
-        document.title="Home"
-    },[]);
-    const divRef = useRef<HTMLDivElement>(null);
-    const inViewport = useInViewPort(divRef,{threshold:0});
+
+    const leftRef = useRef<HTMLDivElement>(null);
+    const rightRef = useRef<HTMLDivElement>(null);
+    const rightIninViewport = useInViewPort(rightRef,{threshold:0});
+    const leftIninViewport = useInViewPort(leftRef,{threshold:0});
     return(
-        <div className={`home ${inViewport?"show":null}`} ref={divRef} id="main">
-         <div className="left-side">
+        <div className="home" id="main">
+         <div className={`left-side ${leftIninViewport?"from-left":null}`} ref={leftRef}>
             <div className="hello">
             <h1>Hi all, i'm Basel Balkees</h1>
             <img src={hello} alt="hello" />
@@ -29,7 +29,7 @@ const Home = () => {
                 </div>
             </div>
          </div>
-         <div className="right-side">
+         <div className={`right-side ${rightIninViewport?"from-right":null}`} ref={rightRef}>
             <img src={developer} alt="React developer" />
          </div>
         </div>

@@ -11,11 +11,13 @@ import redux from "./../../assest/images/icons8-redux-480.png";
 import { useRef } from "react";
 import useInViewPort from "../../useInViewPort/useInViewPort";
 const Skills = () => {
-    const skillsRef = useRef<HTMLDivElement>(null);
-    const inViewport = useInViewPort(skillsRef,{threshold:0});
+  const leftRef = useRef<HTMLDivElement>(null);
+  const rightRef = useRef<HTMLDivElement>(null);
+  const rightIninViewport = useInViewPort(rightRef,{threshold:0});
+  const leftIninViewport = useInViewPort(leftRef,{threshold:0});
     return(
-        <div className={`skills ${inViewport?"show":null}`} id="mySkills" ref={skillsRef}>
-            <div className="left-skills-side">
+        <div className="skills" id="mySkills">
+            <div className={`left-skills-side ${leftIninViewport?"from-left":null}`} ref={leftRef}>
               <h1>Skills :</h1>
               <p>Creating and developing interactive, responsive, and user-friendly web designs using :</p>
               <div className="skills-list">
@@ -29,7 +31,7 @@ const Skills = () => {
                 <p>Redux <img src={redux} alt="REDUX" /></p>
               </div>
             </div>
-            <div className="right-skills-side">
+            <div className={`right-skills-side ${rightIninViewport?"from-right":null}`} ref={rightRef}>
                 <img src={skills} alt="SKILLS" />
             </div>
         </div>
