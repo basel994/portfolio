@@ -1,17 +1,26 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.226b5235.css",
-    "main.js": "/portfolio/static/js/main.589cc818.js",
+    "main.css": "/portfolio/static/css/main.53581095.css",
+    "main.js": "/portfolio/static/js/main.eaf63324.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/welcome.webp": "/portfolio/static/media/welcome.fd32062fdfc21057a93b.webp",
+    "static/media/Montserrat-Regular.ttf": "/portfolio/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
+    "static/media/icons8-react-480.png": "/portfolio/static/media/icons8-react-480.443ec513ef0752536b8a.png",
+    "static/media/education.gif": "/portfolio/static/media/education.4efcd992d4bffb33524f.gif",
     "static/media/sun.png": "/portfolio/static/media/sun.134a3944a4cc55ac8e4e.png",
+    "static/media/skills4.webp": "/portfolio/static/media/skills4.c65d39226fcf839f58e6.webp",
+    "static/media/icons8-sass-480.png": "/portfolio/static/media/icons8-sass-480.ab1f30eb8120111cf614.png",
+    "static/media/icons8-redux-480.png": "/portfolio/static/media/icons8-redux-480.492ed7d54dd2352c5786.png",
     "static/media/dark.png": "/portfolio/static/media/dark.816c5a52698cdb5e89d9.png",
+    "static/media/icons8-css-480.png": "/portfolio/static/media/icons8-css-480.8aaf7833370a6845139c.png",
+    "static/media/icons8-html-480.png": "/portfolio/static/media/icons8-html-480.be50d4568ab0cb01edb8.png",
     "index.html": "/portfolio/index.html",
-    "main.226b5235.css.map": "/portfolio/static/css/main.226b5235.css.map",
-    "main.589cc818.js.map": "/portfolio/static/js/main.589cc818.js.map",
+    "main.53581095.css.map": "/portfolio/static/css/main.53581095.css.map",
+    "main.eaf63324.js.map": "/portfolio/static/js/main.eaf63324.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.226b5235.css",
-    "static/js/main.589cc818.js"
+    "static/css/main.53581095.css",
+    "static/js/main.eaf63324.js"
   ]
 }
