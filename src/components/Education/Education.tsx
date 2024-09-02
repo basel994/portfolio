@@ -8,7 +8,7 @@ const Education = () => {
     return(
         <div className={`education ${inViewport?"show":null}`} id="myEducation" ref={eduRef}>
             <div className="left-education-side">
-                <h1>Education :</h1>
+                <h1>Education</h1>
                 <p>Bachelor's degree in Information Technology Engineering .</p>
                 <p>University of Syria, Tartus .</p>
                 <p>2013 - 2018</p>

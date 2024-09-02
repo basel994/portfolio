@@ -1,5 +1,5 @@
 .skills {
-    margin-top: 5rem;
+    margin-top: 3rem;
     display: flex;
     align-items: flex-start;
     flex-direction: row-reverse;
@@ -35,7 +35,7 @@
 }
 .right-skills-side img {
     width: 300px;
-    height: auto
+    height: 300px;
 }
 @media screen and ( max-width:992px) {
     .skills {
@@ -43,14 +43,10 @@
         align-items: center;
         gap: 2rem;
     }
-    .left-skills-side h1 {
-        font-size: 1.5rem;
-    }
-    .left-skills-side > p {
-        font-size: 1.3rem;
-    }
+
     .right-skills-side img {
         width: 200px;
+        height: 200px;
         animation: position 1s ease-in-out forwards;
     }
 

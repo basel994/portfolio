@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Skills from './components/Skills/Skills';
 import scrollTop from "./assest/images/icons8-arrow-64.png";
 import Education from './components/Education/Education';
+import Projects from './components/Projects/Projects';
 
 function App() {
   const {mode} = useContext(ModeContext);
@@ -31,6 +32,7 @@ function App() {
       <div className='content'>
         <Home />
         <Skills />
+        <Projects />
         <Education />
           <img className={`scroll-top ${showScroll?"scroll-top-show":null}`} onClick={()=>window.scrollTo({top:0,behavior:"smooth"})} src={scrollTop} alt='top' />
       </div>

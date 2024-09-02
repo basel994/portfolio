@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 3rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 .left-education-side {
     display: flex;
@@ -17,7 +17,7 @@
 
 .right-education-side img {
     width: 300px;
-    height: auto;
+    height: 300px;
 }
 @media screen and ( max-width:992px) {
     .education {
@@ -25,14 +25,10 @@
         align-items: center;
         gap: 2rem;
     }
-    .left-skills-side h1 {
-        font-size: 1.5rem;
-    }
-    .left-education-side p {
-        font-size: 1.3rem;
-    }
+
     .right-education-side img {
         width: 200px;
+        height: 200px;
         animation: position 1s ease-in-out forwards;
     }
 

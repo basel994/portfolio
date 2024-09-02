@@ -1,5 +1,5 @@
 import "./Skills.css";
-import skills from "./../../assest/images/skills4.webp";
+import skills from "./../../assest/images/dev.gif";
 import html from "./../../assest/images/icons8-html-480.png";
 import css from "./../../assest/images/icons8-css-480.png";
 import sass from "./../../assest/images/icons8-sass-480.png";
@@ -18,7 +18,7 @@ const Skills = () => {
     return(
         <div className="skills" id="mySkills">
             <div className={`left-skills-side ${leftIninViewport?"from-left":null}`} ref={leftRef}>
-              <h1>Skills :</h1>
+              <h1>Skills</h1>
               <p>Creating and developing interactive, responsive, and user-friendly web designs using :</p>
               <div className="skills-list">
                 <p>Html <img src={html} alt="HTML" /></p>

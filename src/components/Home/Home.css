@@ -3,7 +3,7 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 3rem;
-    padding: 6rem 0;
+    padding-top: 3rem;
     overflow: hidden;
 }
 .left-side {
@@ -51,7 +51,7 @@ gap: 1rem;
 }
 .right-side img {
     width: 300px;
-    height: auto;
+    height: 300px;
 }
 .contact {
     display: flex;
@@ -97,18 +97,15 @@ gap: 1rem;
         align-items: center;
         gap: 2rem;
     }
-    .hello h1 {
-        font-size: 1.5rem;
-    }
-    .graph .info p {
-        font-size: 1.3rem;
-    }
+
     .right-side {
         width: 100%;
         display: flex;
         justify-content: center;
     }
     .right-side img {
+        width: 200px;
+        height: 200px;
         animation: position 1s ease-in-out forwards;
     }
 
@@ -120,10 +117,5 @@ gap: 1rem;
             transform: translate(0px);
         }
         
-    }
-}
-@media screen and (max-width:400px) {
-    .right-side img {
-        width: 300px;
     }
 }

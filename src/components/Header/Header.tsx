@@ -61,6 +61,7 @@ const Header = () => {
                 <ul className="links dropdown-menu" ref={linksRef}>
                     <li><a href="#main">About</a></li>
                     <li><a href="#mySkills">Skills</a></li>
+                    <li><a href="#myProjects">Projects</a></li>
                     <li><a href="#myEducation">Education</a></li>
                 </ul>
                 <div className="light-mode">

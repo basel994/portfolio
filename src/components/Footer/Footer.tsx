@@ -5,7 +5,7 @@ const Footer = () => {
     const currentYear = currentDate.getFullYear();
     return(
         <div className="footer" id="f">
-            <h3>{`Made by Basel Balkees ${currentYear}`}</h3>
+            <h3>{`Made with ❤️ by Basel Balkees ${currentYear}`}</h3>
         </div>
     )
 }
