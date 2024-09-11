@@ -11,9 +11,10 @@ const Projects = () => {
         <div className={`projects ${inViewport?"show":null}`} id="myProjects" ref={projectRef}>
             <h1>Projects</h1>
             <div className="projects-list">
-                {myrojects.map((project) => {
+                {myrojects.map((project,index:number) => {
                     return(
                         <ProjectCard project={project}
+                        key={index}
                           />
                     )
                 })}

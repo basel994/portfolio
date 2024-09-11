@@ -1,9 +1,10 @@
-import { useContext, useEffect, useRef, useState } from "react";
 import "./Header.css";
+import { useContext, useEffect, useRef, useState } from "react";
 import { ModeContext } from "../../context/modeProvider/ModeProvider";
 import dark from "./../../assest/dark.png";
 import sun from "./../../assest/sun.png";
 import B from "./../../assest/images/logo.png";
+import { menu } from "./menu";
 
 const Header = () => {
     const {mode,changeMode} = useContext(ModeContext);
@@ -59,10 +60,13 @@ const Header = () => {
                     <div>asel Balkees</div>
                 </div>
                 <ul className="links dropdown-menu" ref={linksRef}>
-                    <li><a href="#main">About</a></li>
-                    <li><a href="#mySkills">Skills</a></li>
-                    <li><a href="#myProjects">Projects</a></li>
-                    <li><a href="#myEducation">Education</a></li>
+                    {
+                        menu.map((link:{name:string,href:string},index:number) => {
+                            return(
+                                <li key={index}><a href={link.href}>{link.name}</a></li>
+                            )
+                        })
+                    }
                 </ul>
                 <div className="light-mode">
                     <img src={mode==="dark"?sun:dark} alt="light" onClick={updateMode} />
