@@ -25,7 +25,7 @@ const Home = () => {
                 <p>Passionate about continuous learning and keeping up with developments in web programming languages.</p>
                 </div>
                 <div className="contact">
-                    <button className="btn">See My Resume</button>
+                    <button className="btn"><a href="https://drive.google.com/file/d/1Fie683PD9PZGfdVJ89GJqWu9KMTHThnB/view?usp=sharing">See My Resume</a></button>
                 </div>
             </div>
          </div>
