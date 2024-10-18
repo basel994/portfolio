@@ -8,6 +8,7 @@ import javascript from "./../../assest/images/icons8-javascript-480.png";
 import typescript from "./../../assest/images/icons8-typescript-480.png";
 import react from "./../../assest/images/icons8-react-480.png";
 import redux from "./../../assest/images/icons8-redux-480.png";
+import nextJs from "./../../assest/images/nextjs-icon.png";
 import { useRef } from "react";
 import useInViewPort from "../../useInViewPort/useInViewPort";
 const Skills = () => {
@@ -29,6 +30,7 @@ const Skills = () => {
                 <p>Typescript <img src={typescript} alt="TYPESCRIPT" /></p>
                 <p>React <img src={react} alt="REACT" /></p>
                 <p>Redux <img src={redux} alt="REDUX" /></p>
+                <p>Redux <img src={nextJs} alt="Next js" /></p>
               </div>
             </div>
             <div className={`right-skills-side ${rightIninViewport?"from-right":null}`} ref={rightRef}>
