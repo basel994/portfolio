@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.b60cd688.css",
-    "main.js": "/portfolio/static/js/main.93ada11d.js",
+    "main.js": "/portfolio/static/js/main.8e8f3b48.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
     "static/media/welcome.webp": "/portfolio/static/media/welcome.fd32062fdfc21057a93b.webp",
     "static/media/Montserrat-Regular.ttf": "/portfolio/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
@@ -10,17 +10,18 @@
     "static/media/education.gif": "/portfolio/static/media/education.4efcd992d4bffb33524f.gif",
     "static/media/sun.png": "/portfolio/static/media/sun.134a3944a4cc55ac8e4e.png",
     "static/media/icons8-sass-480.png": "/portfolio/static/media/icons8-sass-480.ab1f30eb8120111cf614.png",
+    "static/media/nextjs-icon.png": "/portfolio/static/media/nextjs-icon.80bf1edc048bbe2aad61.png",
     "static/media/icons8-redux-480.png": "/portfolio/static/media/icons8-redux-480.492ed7d54dd2352c5786.png",
     "static/media/dark.png": "/portfolio/static/media/dark.816c5a52698cdb5e89d9.png",
     "static/media/icons8-css-480.png": "/portfolio/static/media/icons8-css-480.8aaf7833370a6845139c.png",
     "static/media/icons8-html-480.png": "/portfolio/static/media/icons8-html-480.be50d4568ab0cb01edb8.png",
     "index.html": "/portfolio/index.html",
     "main.b60cd688.css.map": "/portfolio/static/css/main.b60cd688.css.map",
-    "main.93ada11d.js.map": "/portfolio/static/js/main.93ada11d.js.map",
+    "main.8e8f3b48.js.map": "/portfolio/static/js/main.8e8f3b48.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b60cd688.css",
-    "static/js/main.93ada11d.js"
+    "static/js/main.8e8f3b48.js"
   ]
 }
