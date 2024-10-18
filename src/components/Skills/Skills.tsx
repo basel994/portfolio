@@ -30,7 +30,7 @@ const Skills = () => {
                 <p>Typescript <img src={typescript} alt="TYPESCRIPT" /></p>
                 <p>React <img src={react} alt="REACT" /></p>
                 <p>Redux <img src={redux} alt="REDUX" /></p>
-                <p>Redux <img src={nextJs} alt="Next js" /></p>
+                <p>Next js <img src={nextJs} alt="Next js" /></p>
               </div>
             </div>
             <div className={`right-skills-side ${rightIninViewport?"from-right":null}`} ref={rightRef}>
